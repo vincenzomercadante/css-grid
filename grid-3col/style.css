@@ -2,7 +2,7 @@
 
 .wrapper{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 20vh 60vh 20vh;
     gap: 10px;
 }
@@ -14,15 +14,23 @@ header{
 }
 
 main{
-    grid-column: 1 / 2;
+    grid-column: 2;
     grid-row: 2;
     background-color: purple;
 }
 
-aside{
-    grid-column: 2 / -1;
+.aside-left, .aside-right{
     height: 40vh;
     background-color: pink;
+}
+
+.aside-left{
+    grid-column: 1;
+}
+
+.aside-right{
+    grid-column: 3;
+    align-self: end;
 }
 
 footer{
